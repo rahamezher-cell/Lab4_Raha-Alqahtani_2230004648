@@ -1,0 +1,104 @@
+Task 1 - Prolog Unification
+
+1. Query:
+house = house.
+
+Result:
+true.
+
+Explanation:
+Both terms are identical atoms, so they can be unified.
+
+
+2. Query:
+house = abc.
+
+Result:
+false.
+
+Explanation:
+house and abc are different atoms, so they cannot be unified.
+
+
+3. Query:
+edge(a,b) = edge(C,b).
+
+Result:
+C = a.
+
+Explanation:
+C can be unified with a, and the second arguments are identical.
+
+
+4. Query:
+edge(a,d) = edge(C,B).
+
+Result:
+C = a,
+B = d.
+
+Explanation:
+C can be unified with a, and B can be unified with d.
+
+
+5. Query:
+edge(C,B) = edge(a,d).
+
+Result:
+C = a,
+B = d.
+
+Explanation:
+C can be unified with a, and B can be unified with d.
+
+
+6. Query:
+edge(A,f(g,h)) = edge(a,B).
+
+Result:
+A = a,
+B = f(g,h).
+
+Explanation:
+A can be unified with a, and B can be unified with the compound term f(g,h).
+
+
+7. Query:
+edge(A,A) = edge(b,c).
+
+Result:
+false.
+
+Explanation:
+A would need to be both b and c, which is not possible.
+
+
+8. Query:
+edge(A,A) = edge(b,b).
+
+Result:
+A = b.
+
+Explanation:
+Both occurrences of A can be unified with b.
+
+
+9. Query:
+A = B, B = f.
+
+Result:
+A = B,
+B = f.
+
+Explanation:
+A is unified with B, and then B is unified with f, so both refer to f.
+
+
+10. Query:
+A = B, B = f, A = e.
+
+Result:
+false.
+
+Explanation:
+After B is unified with f, A also refers to f. A cannot then be unified with e.
